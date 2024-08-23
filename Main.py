@@ -10,6 +10,34 @@ def btn8(number):
 def btn7(number):
     display.insert(END,number)
 
+def btn6(number):
+    display.insert(END,number)
+
+def btn5(number):
+    display.insert(END,number)
+
+def btn4(number):
+    display.insert(END,number)
+
+def btn3(number):
+    display.insert(END,number)
+
+def btn2(number):
+    display.insert(END,number)
+
+def btn1(number):
+    display.insert(END,number)
+
+def btnplus(number):
+    display.insert(END,number)
+
+
+
+def answer():
+    getvalue = display.get()
+    resalt =eval(answer)
+    display.delete(0,END)
+    display.insert(resalt)
 
 
 #================================
@@ -58,8 +86,27 @@ b2.grid(row=3,coloumn=1)
 b1 = button(root,text='1', font('Arial',10,'bold') width=4, cursor='hand2', relief=GROOVE command=Lambda :btn1('1'))
 b1.grid(row=3,coloumn=2)
 
-bmax = button(root,text='X', font('Arial',10,'bold') width=4, cursor='hand2', relief=GROOVE command=Lambda :btnmax('X'))
+bmax = button(root,text='X', font('Arial',10,'bold') width=4, cursor='hand2', relief=GROOVE command=Lambda :btnmax('*'))
 bmax.grid(row=3,coloumn=3)
+
+
+b0 = button(root,text='0', font('Arial',10,'bold') width=4, cursor='hand2', relief=GROOVE command=Lambda :btn1('0'))
+b0.grid(row=4,coloumn=0)
+
+bdot = button(root,text='.', font('Arial',10,'bold') width=4, cursor='hand2', relief=GROOVE command=Lambda :btn1('.'))
+bdot.grid(row=4,coloumn=1)
+
+bclear = button(root,text='1', font('Arial',10,'bold') width=4, cursor='hand2', relief=GROOVE command=Lambda :btn1('1'))
+bclear.grid(row=4,coloumn=2)
+
+bdev = button(root,text='/', font('Arial',10,'bold') width=4, cursor='hand2', relief=GROOVE command=Lambda :btndev('/'))
+bdev.grid(row=4,coloumn=3)
+
+
+
+bsum = button(root,text='/', font('Arial',10,'bold') width=4, cursor='hand2', relief=GROOVE command=answer)
+bsum.grid(row=5,coloumn=0, coloumnspan=4,)
+
 
 
 
