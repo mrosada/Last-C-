@@ -35,10 +35,12 @@ def btnplus(number):
 
 def answer():
     getvalue = display.get()
-    resalt =eval(answer)
+    resalt =eval(getvalue)
     display.delete(0,END)
-    display.insert(resalt)
+    display.insert(0,resalt)
 
+def clear():
+    display.delete(0,END)
 
 #================================
 root =Tk()
@@ -96,7 +98,7 @@ b0.grid(row=4,coloumn=0)
 bdot = button(root,text='.', font('Arial',10,'bold') width=4, cursor='hand2', relief=GROOVE command=Lambda :btn1('.'))
 bdot.grid(row=4,coloumn=1)
 
-bclear = button(root,text='1', font('Arial',10,'bold') width=4, cursor='hand2', relief=GROOVE command=Lambda :btn1('1'))
+bclear = button(root,text='Ac', font('Arial',10,'bold') width=4, cursor='hand2', relief=GROOVE command=clear)
 bclear.grid(row=4,coloumn=2)
 
 bdev = button(root,text='/', font('Arial',10,'bold') width=4, cursor='hand2', relief=GROOVE command=Lambda :btndev('/'))
