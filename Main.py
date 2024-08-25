@@ -1,4 +1,5 @@
 from tkinter import*
+from tkinter import messgebox 
 
 #================================
 def btn9(number):
@@ -35,9 +36,14 @@ def btnplus(number):
 
 def answer():
     getvalue = display.get()
-    resalt =eval(getvalue)
-    display.delete(0,END)
-    display.insert(0,resalt)
+    try:
+       resalt =eval(getvalue)
+       display.delete(0,END)
+       display.insert(0,resalt)
+    expect ZerodivitionErro:
+       messgebox.showError("Error","A number Cant")
+    expect sintaxErro:
+       messagebox.showError("Err","")
 
 def clear():
     display.delete(0,END)
