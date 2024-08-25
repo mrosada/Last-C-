@@ -1,3 +1,6 @@
+#pip install cx_Freeze 
+#python setup.py bdist_msi
+
 from cx_Freeze import setup,Executable,sys
 includefiles=['icon.ico']
 excludes=[]
